@@ -16,10 +16,10 @@ public class ComputerPlayer implements Player{
     @Override
     public void respond(boolean lowerOrGreater) {
         if (lowerOrGreater == false){
-            logger.log("grand");
+            logger.log("Le nomnbre est plus grand");
             this.min = askNextGuess();
         }else{
-            logger.log("petit");
+            logger.log("Le nomnbre est plus petit");
             this.max = askNextGuess();
         }
     }
