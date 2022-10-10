@@ -1,4 +1,4 @@
-package fr.lernejo;
+package fr.lernejo.guessgame;
 
 import fr.lernejo.guessgame.ComputerPlayer;
 import fr.lernejo.guessgame.HumanPlayer;

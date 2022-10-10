@@ -1,0 +1,2 @@
+2022-10-10 17:08:53.734 simulation: Félicitation le nombre est trouvé
+2022-10-10 17:08:53.814 simulation: Le programme a trouvé le nombre en 00:00.085ms
