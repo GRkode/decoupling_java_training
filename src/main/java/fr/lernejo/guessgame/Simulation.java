@@ -4,6 +4,9 @@ import fr.lernejo.guessgame.Player;
 import fr.lernejo.logger.Logger;
 import fr.lernejo.logger.LoggerFactory;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Simulation {
 
     private final Logger logger = LoggerFactory.getLogger("simulation");
@@ -32,8 +35,20 @@ public class Simulation {
         }
     }
 
-    public void loopUntilPlayerSucceed() {
-        //TODO implement me
-        while (this.nextRound() != true ){}
+    public void loopUntilPlayerSucceed(long interMax) {
+        long startTime = System.currentTimeMillis();
+        for(int i = 0; i < interMax; i++){
+            if(this.nextRound() == true ){
+                break;
+            }
+        }
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        if(interMax == 1000){
+            SimpleDateFormat simpleDate = new SimpleDateFormat("mm:ss.SSS");
+            Date date = new Date(totalTime);
+            String time = simpleDate.format(date);
+            logger.log("Le programme a trouvé le nombre en " + time + "ms");
+        }
     }
 }
