@@ -4,6 +4,8 @@ public class LoggerFactory {
 
 
     public static Logger getLogger(String name) {
-        return new ConsoleLogger();
+//        Logger consoleLogger = new ConsoleLogger();
+        Logger fileLogger = new FileLogger("logging.txt");
+        return new ContextualLogger(name, fileLogger);
     }
 }
